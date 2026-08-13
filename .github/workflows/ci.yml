@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  fedora:
+    runs-on: ubuntu-latest
+    container: fedora:44
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: >-
+          dnf install -y rust cargo rustfmt clippy meson ninja-build gtk4-devel
+          libadwaita-devel appstream-devel gettext-devel desktop-file-utils
+          PackageKit rpm-build
+      - name: Validate metadata
+        run: |
+          desktop-file-validate data/io.github.srwalkerb.DuckPackages.desktop
+          appstreamcli validate --no-net data/io.github.srwalkerb.DuckPackages.metainfo.xml
+          msgfmt --check --check-accelerators=_ -o /dev/null po/pt_BR.po
+      - name: Check Rust
+        run: |
+          cargo fmt --check
+          cargo clippy --all-targets -- -D warnings
+          cargo test
+      - name: Build with Meson
+        run: |
+          meson setup build -Dprofile=release
+          meson compile -C build
+      - name: Build RPM
+        run: ./scripts/build-rpm.sh

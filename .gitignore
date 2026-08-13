@@ -1,0 +1,7 @@
+/build/
+/target/
+/.build-deps/
+/packaging/rpmbuild/
+/.flatpak-builder/
+*.rpm
+*.tar.xz

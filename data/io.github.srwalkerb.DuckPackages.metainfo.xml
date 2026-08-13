@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.srwalkerb.DuckPackages</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Duck Packages</name>
+  <summary>Understand and remove installed applications</summary>
+  <summary xml:lang="pt-BR">Entenda e remova aplicativos instalados</summary>
+  <description>
+    <p>Duck Packages shows applications installed by your Linux distribution and explains the impact before removing one.</p>
+    <p xml:lang="pt-BR">Duck Packages mostra os aplicativos instalados pela sua distribuição Linux e explica o impacto antes de remover um deles.</p>
+  </description>
+  <launchable type="desktop-id">io.github.srwalkerb.DuckPackages.desktop</launchable>
+  <developer id="io.github.srwalkerb">
+    <name>Duck Packages contributors</name>
+  </developer>
+  <url type="homepage">https://github.com/srwalkerb/duck-package-manager</url>
+  <url type="bugtracker">https://github.com/srwalkerb/duck-package-manager/issues</url>
+  <content_rating type="oars-1.1" />
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <releases>
+    <release version="0.1.0" date="2026-08-12">
+      <description><p>Initial development release.</p></description>
+    </release>
+  </releases>
+</component>
+

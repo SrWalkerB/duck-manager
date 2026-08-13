@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Duck Packages
+Comment=View and safely remove installed applications
+Comment[pt_BR]=Veja e remova aplicativos instalados com segurança
+Exec=duck-packages
+Icon=io.github.srwalkerb.DuckPackages
+Terminal=false
+Type=Application
+Categories=Settings;PackageManager;GTK;GNOME;
+Keywords=packages;applications;remove;uninstall;
+Keywords[pt_BR]=pacotes;aplicativos;remover;desinstalar;
+StartupNotify=true
+DBusActivatable=false

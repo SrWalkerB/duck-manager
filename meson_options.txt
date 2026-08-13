@@ -1,0 +1,2 @@
+option('profile', type: 'combo', choices: ['development', 'release'], value: 'development', description: 'Cargo build profile')
+

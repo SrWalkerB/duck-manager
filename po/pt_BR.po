@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: duck-packages 0.1.0\n"
+"PO-Revision-Date: 2026-08-12 00:00-0300\n"
+"Last-Translator: Duck Packages contributors\n"
+"Language-Team: Brazilian Portuguese\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Applications"
+msgstr "Aplicativos"
+
+msgid "Packages"
+msgstr "Pacotes"
+
+msgid "Search installed software"
+msgstr "Pesquisar software instalado"
+
+msgid "Loading installed applications…"
+msgstr "Carregando aplicativos instalados…"
+
+msgid "No applications found"
+msgstr "Nenhum aplicativo encontrado"
+
+msgid "Try a different search."
+msgstr "Tente uma pesquisa diferente."
+
+msgid "Advanced package view"
+msgstr "Visão avançada de pacotes"
+
+msgid "Libraries and system components are shown here. Removing them can affect other software."
+msgstr "Bibliotecas e componentes do sistema aparecem aqui. Removê-los pode afetar outros programas."
+
+msgid "Open"
+msgstr "Abrir"
+
+msgid "Remove"
+msgstr "Remover"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Package"
+msgstr "Pacote"
+
+msgid "Version"
+msgstr "Versão"
+
+msgid "Architecture"
+msgstr "Arquitetura"
+
+msgid "Origin"
+msgstr "Origem"
+
+msgid "Installed size"
+msgstr "Tamanho instalado"
+
+msgid "Removal impact"
+msgstr "Impacto da remoção"
+
+msgid "Review every package that will be removed before continuing."
+msgstr "Revise todos os pacotes que serão removidos antes de continuar."
+
+msgid "Waiting for authorization…"
+msgstr "Aguardando autorização…"
+
+msgid "Removing…"
+msgstr "Removendo…"
+
+msgid "Removed"
+msgstr "Removido"
+
+msgid "Package management unavailable"
+msgstr "Gerenciamento de pacotes indisponível"
+
+msgid "Applications remain visible, but removal is disabled. Install or enable PackageKit 1.3.5 or newer."
+msgstr "Os aplicativos continuam visíveis, mas a remoção está desativada. Instale ou habilite o PackageKit 1.3.5 ou mais recente."
+
+msgid "About Duck Packages"
+msgstr "Sobre o Duck Packages"
+
+msgid "Main menu"
+msgstr "Menu principal"
+
+msgid "PackageKit is unavailable"
+msgstr "O PackageKit não está disponível"
+
+msgid "The application must be restarted."
+msgstr "O aplicativo precisa ser reiniciado."
+
+msgid "Your session must be restarted."
+msgstr "Sua sessão precisa ser reiniciada."
+
+msgid "The computer must be restarted."
+msgstr "O computador precisa ser reiniciado."
+
+msgid "{count} package"
+msgid_plural "{count} packages"
+msgstr[0] "{count} pacote"
+msgstr[1] "{count} pacotes"
+
+msgid "freed"
+msgstr "liberados"
+
+msgid "Affected applications"
+msgstr "Aplicativos afetados"
+
+msgid "+ {count} more"
+msgid_plural "+ {count} more"
+msgstr[0] "+ mais {count}"
+msgstr[1] "+ mais {count}"
+
+msgid "Close"
+msgstr "Fechar"
+
+msgid "Loading installed packages…"
+msgstr "Carregando pacotes instalados…"

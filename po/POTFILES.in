@@ -1,0 +1,5 @@
+src/main.rs
+src/ui.rs
+src/backend/diagnostic.rs
+data/io.github.srwalkerb.DuckPackages.desktop
+data/io.github.srwalkerb.DuckPackages.metainfo.xml

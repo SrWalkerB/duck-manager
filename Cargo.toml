@@ -1,0 +1,27 @@
+[package]
+name = "duck-packages"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.87"
+license = "GPL-3.0-or-later"
+description = "A focused GNOME package removal tool"
+repository = "https://github.com/srwalkerb/duck-package-manager"
+
+[dependencies]
+async-channel = "2.5"
+async-trait = "0.1"
+blocking = "1.6"
+futures-util = "0.3"
+gettextrs = { version = "0.7", package = "gettext-rs", features = ["gettext-system"] }
+gtk = { version = "0.10", package = "gtk4", features = ["v4_14"] }
+adw = { version = "0.8", package = "libadwaita", features = ["v1_5"] }
+gio = { version = "0.21", features = ["v2_80"] }
+glib = { version = "0.21", features = ["v2_80"] }
+libappstream = "0.4"
+thiserror = "2"
+zbus = "5.19"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
