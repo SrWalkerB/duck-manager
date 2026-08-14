@@ -1,23 +1,4 @@
 /* Keep the interface native: these rules only define product-specific structure. */
-.app-card {
-  padding: 16px;
-  border-radius: 12px;
-}
-
-.app-card:hover {
-  background-color: alpha(currentColor, 0.06);
-}
-
-.app-card:focus-visible {
-  outline: 2px solid @accent_color;
-  outline-offset: 2px;
-}
-
-.app-card-title {
-  font-weight: 700;
-}
-
-.app-card-summary,
 .dim-label {
   opacity: 0.72;
 }
@@ -32,6 +13,8 @@
   background-color: alpha(@warning_color, 0.10);
 }
 
-.package-list {
+.diagnostic-issue {
+  padding: 12px;
   border-radius: 12px;
+  background-color: alpha(@warning_color, 0.12);
 }

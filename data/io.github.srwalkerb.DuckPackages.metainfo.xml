@@ -14,8 +14,8 @@
   <developer id="io.github.srwalkerb">
     <name>Duck Packages contributors</name>
   </developer>
-  <url type="homepage">https://github.com/srwalkerb/duck-package-manager</url>
-  <url type="bugtracker">https://github.com/srwalkerb/duck-package-manager/issues</url>
+  <url type="homepage">https://github.com/SrWalkerB/duck-manager</url>
+  <url type="bugtracker">https://github.com/SrWalkerB/duck-manager/issues</url>
   <content_rating type="oars-1.1" />
   <requires>
     <display_length compare="ge">360</display_length>

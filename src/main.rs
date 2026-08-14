@@ -1,6 +1,9 @@
 mod backend;
 mod catalog;
 mod domain;
+mod launch_diagnostic;
+mod processes;
+mod profile_locks;
 mod ui;
 
 use adw::prelude::*;

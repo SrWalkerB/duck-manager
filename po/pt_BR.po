@@ -37,6 +37,257 @@ msgstr "Bibliotecas e componentes do sistema aparecem aqui. Removê-los pode afe
 msgid "Open"
 msgstr "Abrir"
 
+msgid "Processes"
+msgstr "Processos"
+
+msgid "Refresh processes"
+msgstr "Atualizar processos"
+
+msgid "Checking running processes…"
+msgstr "Verificando processos em execução…"
+
+msgid "Could not inspect processes"
+msgstr "Não foi possível inspecionar os processos"
+
+msgid "Not running"
+msgstr "Não está em execução"
+
+msgid "No related processes were found."
+msgstr "Nenhum processo relacionado foi encontrado."
+
+msgid "Possible processes"
+msgstr "Processos possíveis"
+
+msgid "These matches cannot be safely managed."
+msgstr "Essas correspondências não podem ser gerenciadas com segurança."
+
+msgid "Possible process · PID {pid}"
+msgstr "Processo possível · PID {pid}"
+
+msgid "{count} process"
+msgid_plural "{count} processes"
+msgstr[0] "{count} processo"
+msgstr[1] "{count} processos"
+
+msgid "Session PID {pid}"
+msgstr "Sessão PID {pid}"
+
+msgid "Force Quit"
+msgstr "Forçar encerramento"
+
+msgid "Force quit this session"
+msgstr "Forçar o encerramento desta sessão"
+
+msgid "End"
+msgstr "Encerrar"
+
+msgid "End this session"
+msgstr "Encerrar esta sessão"
+
+msgid "End this session?"
+msgstr "Encerrar esta sessão?"
+
+msgid "{application} may have unsaved work. {count} will receive a request to exit."
+msgstr "O {application} pode ter trabalho não salvo. {count} receberá uma solicitação para sair."
+
+msgid "Force quit this session?"
+msgstr "Forçar o encerramento desta sessão?"
+
+msgid "{application} will stop immediately. Unsaved work in {count} may be lost."
+msgstr "O {application} será interrompido imediatamente. O trabalho não salvo em {count} pode ser perdido."
+
+msgid "The session is no longer running."
+msgstr "A sessão não está mais em execução."
+
+msgid "Exit request sent."
+msgstr "Solicitação de saída enviada."
+
+msgid "Exit request sent, but some processes could not be reached."
+msgstr "A solicitação de saída foi enviada, mas alguns processos não puderam ser alcançados."
+
+msgid "Main process"
+msgstr "Processo principal"
+
+msgid "Child process"
+msgstr "Processo filho"
+
+msgid "More opening options"
+msgstr "Mais opções de abertura"
+
+msgid "Open with Logs"
+msgstr "Abrir com logs"
+
+msgid "Logs"
+msgstr "Logs"
+
+msgid "Diagnostic Logs"
+msgstr "Logs de diagnóstico"
+
+msgid "Copy All"
+msgstr "Copiar tudo"
+
+msgid "Copied"
+msgstr "Copiado"
+
+msgid "Copy"
+msgstr "Copiar"
+
+msgid "Copy Technical Log"
+msgstr "Copiar log técnico"
+
+msgid "Copy Diagnosis and Log"
+msgstr "Copiar diagnóstico e log"
+
+msgid "Technical log copied"
+msgstr "Log técnico copiado"
+
+msgid "Diagnosis and log copied"
+msgstr "Diagnóstico e log copiados"
+
+msgid "Launch diagnosis"
+msgstr "Diagnóstico de abertura"
+
+msgid "Technical log"
+msgstr "Log técnico"
+
+msgid "Launching…"
+msgstr "Abrindo…"
+
+msgid "Desktop launcher"
+msgstr "Lançador desktop"
+
+msgid "Executable"
+msgstr "Executável"
+
+msgid "Launch failed"
+msgstr "Falha ao abrir"
+
+msgid "Running (PID {pid})"
+msgstr "Em execução (PID {pid})"
+
+msgid "Process started (PID {pid})"
+msgstr "Processo iniciado (PID {pid})"
+
+msgid "Launched (PID unavailable)"
+msgstr "Aberto (PID indisponível)"
+
+msgid "Could not read output"
+msgstr "Não foi possível ler a saída"
+
+msgid "Process exited with code {code}."
+msgstr "O processo terminou com o código {code}."
+
+msgid "Process exited normally."
+msgstr "O processo terminou normalmente."
+
+msgid "The application did not open (exit code {code})."
+msgstr "O aplicativo não abriu (código de saída {code})."
+
+msgid "Problem detected"
+msgstr "Problema detectado"
+
+msgid "The application did not open"
+msgstr "O aplicativo não abriu"
+
+msgid "{application} stopped with exit code {code}, but Duck Packages could not identify the cause from its output."
+msgstr "O {application} parou com o código de saída {code}, mas o Duck Packages não conseguiu identificar a causa pela saída do processo."
+
+msgid "{application} was stopped by signal {signal}, but Duck Packages could not identify the cause from its output."
+msgstr "O {application} foi encerrado pelo sinal {signal}, mas o Duck Packages não conseguiu identificar a causa pela saída do processo."
+
+msgid "{application} could not be started, but Duck Packages could not identify the cause."
+msgstr "O {application} não pôde ser iniciado, mas o Duck Packages não conseguiu identificar a causa."
+
+msgid "Review the technical log below for more details."
+msgstr "Consulte o log técnico abaixo para mais detalhes."
+
+msgid "The application profile is locked"
+msgstr "O perfil do aplicativo está bloqueado"
+
+msgid "{application} did not open because its profile contains a stale lock referencing PID {pid}, which is no longer running. The application stopped to avoid corrupting its data."
+msgstr "O {application} não abriu porque o perfil contém um bloqueio obsoleto que aponta para o PID {pid}, que não está mais em execução. O aplicativo parou para evitar corromper seus dados."
+
+msgid "{application} did not open because PID {pid} is actively using the same profile."
+msgstr "O {application} não abriu porque o PID {pid} está usando o mesmo perfil."
+
+msgid "{application} reports that PID {pid} is using the same profile, but Duck Packages could not confirm that the process belongs to this application."
+msgstr "O {application} informa que o PID {pid} está usando o mesmo perfil, mas o Duck Packages não conseguiu confirmar que o processo pertence a esse aplicativo."
+
+msgid "{application} reports that PID {pid} is using the same profile. Duck Packages could not inspect that process."
+msgstr "O {application} informa que o PID {pid} está usando o mesmo perfil. O Duck Packages não conseguiu inspecionar esse processo."
+
+msgid "{application} did not open because its profile is locked, usually because another process is using it. The application stopped to avoid corrupting its data."
+msgstr "O {application} não abriu porque o perfil está bloqueado, geralmente porque outro processo o está usando. O aplicativo parou para evitar corromper seus dados."
+
+msgid "Next step: close every {application} window. If no related process is running, remove the stale profile lock and try again."
+msgstr "Próximo passo: feche todas as janelas do {application}. Se nenhum processo relacionado estiver em execução, remova o bloqueio obsoleto do perfil e tente novamente."
+
+msgid "Next step: close the existing {application} session normally, then try again."
+msgstr "Próximo passo: feche normalmente a sessão existente do {application} e tente novamente."
+
+msgid "Next step: close every {application} window you recognize, then try again. Do not remove the lock while a related process is running."
+msgstr "Próximo passo: feche todas as janelas reconhecidas do {application} e tente novamente. Não remova o bloqueio enquanto um processo relacionado estiver em execução."
+
+msgid "Permission denied"
+msgstr "Permissão negada"
+
+msgid "{application} could not access a file or system resource required to start."
+msgstr "O {application} não conseguiu acessar um arquivo ou recurso do sistema necessário para iniciar."
+
+msgid "Next step: check the ownership and permissions of the file named in the technical log."
+msgstr "Próximo passo: verifique o proprietário e as permissões do arquivo indicado no log técnico."
+
+msgid "A required file or library is missing"
+msgstr "Um arquivo ou biblioteca necessária está ausente"
+
+msgid "{application} could not find a file or shared library required to start."
+msgstr "O {application} não encontrou um arquivo ou biblioteca compartilhada necessária para iniciar."
+
+msgid "Next step: repair or reinstall the application package, then try again."
+msgstr "Próximo passo: repare ou reinstale o pacote do aplicativo e tente novamente."
+
+msgid "The graphical session is unavailable"
+msgstr "A sessão gráfica não está disponível"
+
+msgid "{application} could not connect to the display server for this desktop session."
+msgstr "O {application} não conseguiu se conectar ao servidor gráfico desta sessão da área de trabalho."
+
+msgid "Next step: open the application from an active graphical session and check the display settings in the technical log."
+msgstr "Próximo passo: abra o aplicativo em uma sessão gráfica ativa e verifique as configurações de tela no log técnico."
+
+msgid "Application"
+msgstr "Aplicativo"
+
+msgid "Summary"
+msgstr "Resumo"
+
+msgid "Process ended with signal {signal}."
+msgstr "O processo terminou com o sinal {signal}."
+
+msgid "Process exited."
+msgstr "O processo terminou."
+
+msgid "Output limit reached. Additional output is not being kept."
+msgstr "O limite de saída foi atingido. A saída adicional não será mantida."
+
+msgid "Referenced PID {pid} is not active. The reference may be stale."
+msgstr "O PID {pid} citado não está ativo. A referência pode estar obsoleta."
+
+msgid "Referenced PID {pid} belongs to a verified application session."
+msgstr "O PID {pid} citado pertence a uma sessão verificada do aplicativo."
+
+msgid "Referenced PID {pid} may belong to this application, but cannot be safely managed."
+msgstr "O PID {pid} citado pode pertencer a este aplicativo, mas não pode ser gerenciado com segurança."
+
+msgid "Referenced PID {pid} is active, but could not be associated with this application."
+msgstr "O PID {pid} citado está ativo, mas não pôde ser associado a este aplicativo."
+
+msgid "Referenced PID {pid} could not be inspected."
+msgstr "O PID {pid} citado não pôde ser inspecionado."
+
+msgid "No output has been captured yet. The app may use D-Bus activation, reuse an existing process, or not write to standard output."
+msgstr "Nenhuma saída foi capturada até agora. O aplicativo pode usar ativação D-Bus, reutilizar um processo existente ou não escrever na saída padrão."
+
 msgid "Remove"
 msgstr "Remover"
 
@@ -118,3 +369,36 @@ msgstr "Fechar"
 
 msgid "Loading installed packages…"
 msgstr "Carregando pacotes instalados…"
+
+msgid "Startup problems"
+msgstr "Problemas de inicialização"
+
+msgid "These applications have stale profile locks."
+msgstr "Estes aplicativos têm locks de perfil obsoletos."
+
+msgid "Clean up"
+msgstr "Corrigir"
+
+msgid "Profile {profile} · PID {pid} · {count} stale lock(s)"
+msgstr "Perfil {profile} · PID {pid} · {count} lock(s) obsoleto(s)"
+
+msgid "Could not inspect profile locks"
+msgstr "Não foi possível verificar os locks de perfil"
+
+msgid "Remove only the stale SingletonLock, SingletonCookie and SingletonSocket symlinks for {application}? Profile data such as bookmarks, history and settings will not be changed."
+msgstr "Remover apenas os symlinks SingletonLock, SingletonCookie e SingletonSocket obsoletos de {application}? Dados do perfil, como favoritos, histórico e configurações, não serão alterados."
+
+msgid "Clean up stale profile lock?"
+msgstr "Corrigir lock de perfil obsoleto?"
+
+msgid "Removed {count} stale profile lock(s)."
+msgstr "{count} lock(s) de perfil obsoleto(s) removido(s)."
+
+msgid "The application is running again; no lock was removed."
+msgstr "O aplicativo voltou a executar; nenhum lock foi removido."
+
+msgid "The profile lock changed; no lock was removed. Scan again."
+msgstr "O lock de perfil mudou; nenhum lock foi removido. Faça uma nova verificação."
+
+msgid "No packages found"
+msgstr "Nenhum pacote encontrado"

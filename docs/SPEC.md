@@ -37,10 +37,33 @@ enriches them with the local AppStream pool, and falls back to PackageKit
 launchers are omitted. Aliases are deduplicated using executable, startup WM
 class, and normalized display name.
 
-The root uses `AdwNavigationView`, an application grid, a shared search field,
-and a lazily loaded virtualized `GtkColumnView` for packages. Details expose the
+The root uses `AdwNavigationView`, a shared search field, and matching dense
+`AdwActionRow` lists for applications and packages. Details expose the
 launcher, package identity, version, architecture, origin, installed size, and
-description. The impact dialog is the only distinctive visual treatment: it
+description. The Open split button can launch the same desktop entry with
+stdout and stderr redirected through GIO into an in-memory diagnostic window;
+closing the window discards the log without terminating the launched process.
+Application details and diagnostic logs expose related same-user Linux
+processes discovered through `/proc`. Verified launches, executable identity,
+desktop scopes, and descendants are grouped into sessions; weak name matches
+remain visible but cannot be managed. Ending a verified session sends SIGTERM
+only after confirmation and identity revalidation. SIGKILL is offered with a
+second confirmation only if verified processes remain. Command-line arguments
+are never displayed or copied. Explicit PID references in captured output are
+classified as verified, possible, unrelated, missing, or unreadable.
+Known launch failures are translated into a visible cause and recovery step
+above the raw log. The analyzer classifies generic failure categories rather
+than application identities: locked profiles, permission failures, missing
+files or libraries, and unavailable graphical sessions. An absent referenced
+PID is explained as a stale lock rather than a running application. Unknown
+non-zero exits remain explicit and direct the user to the technical log without
+inventing a cause.
+The Applications view also scans the user's XDG configuration tree for
+Chromium-family `SingletonLock`, `SingletonCookie`, and `SingletonSocket`
+symlinks whose lock PID is no longer present. Confirmed stale entries appear
+in a recovery panel; cleanup revalidates the PID, symlink types, and exact
+marker set, then removes only those symlinks. Profile data is never touched.
+The impact dialog is the only distinctive visual treatment: it
 lists the exact removal set, freed space, affected applications, and restart
 scope before offering the destructive action.
 
@@ -50,12 +73,14 @@ motion follow GTK/libadwaita.
 
 ## Acceptance
 
-- Chrome's visible and hidden desktop aliases yield one visible card.
-- Launching uses `GAppInfo`; no shell or package-manager CLI exists in the code.
+- Chrome's visible and hidden desktop aliases yield one visible application row.
+- Launching uses `GAppInfo`/`GDesktopAppInfo`; diagnostic capture redirects file
+  descriptors through GIO, and no shell or package-manager CLI exists in the code.
+- Process actions are limited to the current user's verified `PID + start time`
+  identities; possible matches never receive a signal.
 - Removal never occurs without simulation and confirmation.
 - A plan that changes before execution returns `PlanChanged`.
 - Missing, unsupported, insecure, or unavailable PackageKit produces diagnostic mode.
 - The advanced view contains all installed distribution packages.
 - Domain, catalog, safe flags, metadata, translations, formatting, linting, and
   the RPM build are validated in CI.
-

@@ -27,32 +27,43 @@ Tamanhos de pacote usam dígitos tabulares quando o tema oferece suporte.
 
 - Unidade base: 4 px; escala prática: 4, 8, 12, 16, 24, 32.
 - Conteúdo: máximo de 1040 px, gutters de 12 px em janela estreita e 24 px em ampla.
-- Grade: cartões de 164–220 px; recompõe em uma coluna abaixo de 480 px.
-- Raios, bordas e elevação: estilos `card`, `boxed-list` e overlays do libadwaita.
+- Catálogo: Applications e Packages usam o componente `CatalogList` em uma `boxed-list` de no máximo 720 px.
+- Raios, bordas e elevação: `boxed-list` e overlays do libadwaita.
 - Movimento: somente navegação, abertura de busca e progresso; animações do sistema e
   configuração de redução de movimento são respeitadas automaticamente.
 
 ## Componentes e estados
 
-- Cartão de aplicativo: ícone, nome e resumo; estados normal, hover, foco e desabilitado.
+- Catálogo: componente `CatalogList` com `ActionRow`, ícone, título, subtítulo, chevron e ativação por linha; Applications e Packages usam a mesma composição.
+- Locks de perfil: painel aparece apenas para symlinks `Singleton*` confirmadamente obsoletos; a limpeza exige confirmação e revalida PID, tipo de entrada e conjunto de arquivos.
 - Lista técnica: linhas densas, busca e ordenação; nunca card dentro de card.
 - Prévia de impacto: título específico, espaço estimado, pacotes afetados e única ação destrutiva.
 - Loading: spinner com explicação objetiva.
 - Empty: explica que nenhum aplicativo/pacote corresponde à busca.
 - Error/diagnóstico: mantém leitura disponível e explica como restaurar o backend.
+- Recuperação: remove somente os três symlinks de lock conhecidos; nunca remove dados do perfil nem segue comandos de shell.
+- Processos: lista técnica expansível separa sessões verificadas de correspondências
+  possíveis; encerrar e forçar encerramento exigem confirmações independentes.
+- Diagnóstico de abertura: causa provável e próximo passo aparecem antes do log
+  técnico; o log permanece como evidência, não como interpretação principal. A
+  classificação é por tipo de falha e nunca por regras vinculadas a aplicativos.
+  A ação compacta de cópia oferece o log técnico isolado ou um relatório com
+  diagnóstico, próximo passo e log, sem duplicar controles no cabeçalho.
 - Success: toast usando o mesmo verbo da ação, “Removido”.
 
 ## Voz e acessibilidade
 
 - Registro direto, sem slogans. Verbos: Abrir, Remover, Cancelar, Tentar novamente.
 - Erros dizem o que falhou e o próximo passo; confirmação repete o pacote afetado.
+- Argumentos de processos não são exibidos; PID, executável e papel bastam para
+  verificar a associação sem expor URLs, arquivos ou tokens.
 - Todos os controles têm nome acessível, foco visível e alvo mínimo fornecido pelo GTK.
 - A ordem de teclado acompanha a ordem visual e nenhum estado depende apenas de cor.
 
 ## Anti-padrões locais
 
 - Não simular uma loja: sem avaliações, banners, screenshots ou recomendações.
-- Não esconder dependências removidas, não executar shell e não oferecer “forçar”.
+- Não esconder dependências removidas, não executar shell e não oferecer remoção forçada.
 - Não customizar cor destrutiva, chrome de janela ou tipografia do sistema.
 - Não mostrar aliases `NoDisplay` nem duplicar um mesmo lançador.
 
@@ -60,24 +71,23 @@ Tamanhos de pacote usam dígitos tabulares quando o tema oferece suporte.
 
 - Viewports: 980×720 e 360×720, temas claro, escuro e alto contraste.
 - Gate mínimo Duck Design: 12/14, nenhum eixo zerado.
-- Verificar grade, busca, detalhe, diagnóstico, prévia, progresso, erro e lista vazia.
+- Verificar lista de aplicativos, lista de pacotes, busca, detalhe, diagnóstico, prévia, progresso, erro e lista vazia.
 
 ## Críticas de implementação
 
 ### Primeira passagem
 
 A primeira renderização em 980×720 revelou cartões esticados por toda a largura e
-altura da linha. A combinação de `FlowBox` homogênea, filhos sem largura natural
-controlada e expansão vertical transformava a grade em uma pilha de painéis. Foi
-removida a expansão livre: os cartões passaram a ter 196 px, a grade ficou ancorada
-no topo e o ritmo entre itens passou a 12 px. Também foi removido do CSS o tamanho
-mínimo redundante que competia com a medição do GTK.
+altura da linha. A combinação de `FlowBox` homogênea transformava a grade em uma
+pilha de painéis altos, pouco eficiente para comparar aplicativos. A superfície foi
+recomposta como `ListBox`/`ActionRow`, usando a mesma composição nativa da lista de
+processos: ícone, nome, resumo, chevron e ativação por teclado.
 
 ### Segunda passagem
 
-A instância nativa recompilada mantém o header, a busca e os cartões no mesmo eixo,
-recompõe a quantidade de colunas conforme o espaço e preserva uma coluna utilizável
-na largura mínima. Não há decoração paralela ao libadwaita; a prévia de impacto
+A instância nativa recompilada mantém o header, a busca e as duas listas no mesmo eixo,
+preserva linhas utilizáveis na largura mínima e deixa o GTK cuidar de foco,
+hover e ativação por teclado. Não há decoração paralela ao libadwaita; a prévia de impacto
 continua sendo o único gesto visual específico. Loading, vazio, diagnóstico,
 remoção desabilitada, progresso e sucesso possuem estados distintos sem depender
 somente de cor.

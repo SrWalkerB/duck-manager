@@ -3,7 +3,7 @@ Version:        0.1.0
 Release:        1%{?dist}
 Summary:        View and safely remove installed applications
 License:        GPL-3.0-or-later
-URL:            https://github.com/srwalkerb/duck-package-manager
+URL:            https://github.com/SrWalkerB/duck-manager
 Source0:        %{name}-%{version}.tar.xz
 
 BuildRequires:  cargo
