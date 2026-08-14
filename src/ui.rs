@@ -973,9 +973,11 @@ fn construct_root(
         search_generation.set(generation);
         let search_generation_for_task = search_generation.clone();
         let state_for_search = state_for_search.clone();
+        let search_timeout_for_task = search_timeout.clone();
         *search_timeout.borrow_mut() = Some(glib::timeout_add_local_once(
             std::time::Duration::from_millis(150),
             move || {
+                *search_timeout_for_task.borrow_mut() = None;
                 if search_generation_for_task.get() == generation {
                     refresh_visible_list(&state_for_search);
                 }
